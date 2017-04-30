@@ -21,8 +21,8 @@
     </script>
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+    <div>
+        {{-- <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -76,12 +76,12 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> --}}
 
         @yield('content')
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    {{-- <script src="{{ asset('js/app.js') }}"></script> --}}
 </body>
 </html>
