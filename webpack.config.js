@@ -2,20 +2,26 @@ var path = require('path');
 
 var config = {
     context: path.join(__dirname, 'public'),
-    entry: './js/main.js',
+    entry: './js/index.js',
     output: {
         path: __dirname + '/public/js/',
         filename: 'bundle.js'
     },
     module: {
-        loaders: [{
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader',
-            query: {
-                presets: ['es2015']
+        loaders: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+                query: {
+                    presets: ['es2015']
+                }
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader'
             }
-        }]
+        ]
     },
     resolve: {
         alias: {
